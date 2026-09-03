@@ -3,7 +3,7 @@ services:
     build: .
     command: tail -f /dev/null
     volumes: 
-      - ./csci_420_robotics_labs:/root/csci_420_robotics_labs/
+      - ./csci_420_robotics_labs_f26:/root/csci_420_robotics_labs_f26/
     environment:
       - DISPLAY=novnc:0.0
     networks:
@@ -14,7 +14,7 @@ services:
   novnc:  
     image: theasp/novnc:latest
     volumes:
-      - ./csci_420_robotics_labs:/root/csci_420_robotics_labs/
+      - ./csci_420_robotics_labs_f26:/root/csci_420_robotics_labs_f26/
     environment:
       - DISPLAY_WIDTH=800
       - DISPLAY_HEIGHT=600
